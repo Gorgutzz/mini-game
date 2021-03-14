@@ -1,14 +1,6 @@
 import React from 'react';
 
 const Background = () => {
-};
-
-export default Background;
-
-
-import React from 'react';
-
-const Background = () => {
   const backgroundStyle = {
     fill: '#30abef',
   };
@@ -17,7 +9,7 @@ const Background = () => {
   return (
     <rect
       style={backgroundStyle}
-      x={skyWidth / -2}
+      x={backgroundWidth / -2}
       y={100 - gameHeight}
       width={backgroundWidth}
       height={gameHeight}
