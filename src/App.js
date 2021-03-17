@@ -24,3 +24,10 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  angle: PropTypes.number.isRequired,
+  moveObjects: PropTypes.func.isRequired,
+};
+
+export default App;
