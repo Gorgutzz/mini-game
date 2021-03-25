@@ -8,8 +8,21 @@ const FlyingDinoBase = (props) => {
   };
 
   return (
+    <ellipse
+      cx={props.position.x}
+      cy={props.position.y}
+      rx="40"
+      ry="10"
+      style={style}
+    />
   );
 };
 
+FlyingDinoBase.propTypes = {
+  position: PropTypes.shape({
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired
+  }).isRequired,
+};
 
 export default FlyingDinoBase;
