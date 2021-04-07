@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FlyingDinoBase = (props) => {
+const FlyingObjectBase = (props) => {
   const style = {
     fill: '#979797',
     stroke: '#5c5c5c',
@@ -18,11 +18,11 @@ const FlyingDinoBase = (props) => {
   );
 };
 
-FlyingDinoBase.propTypes = {
+FlyingObjectBase.propTypes = {
   position: PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired
   }).isRequired,
 };
 
-export default FlyingDinoBase;
+export default FlyingObjectBase;
