@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formulas';
 
-const UFOTop = (props) => {
+const UfoTop = (props) => {
   const style = {
     fill: '#b6b6b6',
     stroke: '#7d7d7d',
@@ -39,11 +39,11 @@ const UFOTop = (props) => {
   );
 };
 
-UFOTop.propTypes = {
+UfoTop.propTypes = {
   position: PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired
   }).isRequired,
 };
 
-export default UFOTop;
+export default UfoTop;

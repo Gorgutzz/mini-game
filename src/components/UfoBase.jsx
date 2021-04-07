@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const UFOBase = (props) => {
+const UfoBase = (props) => {
   const style = {
     fill: '#979797',
     stroke: '#5c5c5c',
@@ -18,11 +18,11 @@ const UFOBase = (props) => {
   );
 };
 
-UFOBase.propTypes = {
+UfoBase.propTypes = {
   position: PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired
   }).isRequired,
 };
 
-export default UFOBase;
+export default UfoBase;

@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import UFOBase from './UFOBase';
-import UFOTop from './UFOTop';
+import UfoBase from './UfoBase';
+import UfoTop from './UfoTop';
 
 const UFO = props => (
   <g>
-    <UFOBase position={props.position} />
-    <UFOTop position={props.position} />
+    <UfoBase position={props.position} />
+    <UfoTop position={props.position} />
   </g>
 );
 
-UFO.propTypes = {
+Ufo.propTypes = {
   position: PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired
   }).isRequired,
 };
 
-export default UFO;
+export default Ufo;
