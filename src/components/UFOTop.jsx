@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formulas';
 
-const FlyingObjectTop = (props) => {
+const UFOTop = (props) => {
   const style = {
     fill: '#b6b6b6',
     stroke: '#7d7d7d',
@@ -39,11 +39,11 @@ const FlyingObjectTop = (props) => {
   );
 };
 
-FlyingObjectTop.propTypes = {
+UFOTop.propTypes = {
   position: PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired
   }).isRequired,
 };
 
-export default FlyingObjectTop;
+export default UFOTop;
