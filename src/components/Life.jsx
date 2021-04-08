@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { pathFromBezierCurve } from '../utils/formulas';
 
 const Life = (props) => {
-  const LifeStyle = {
+  const HeartStyle = {
     fill: '#da0d15',
     stroke: '#a51708',
     strokeWidth: '2px',
@@ -50,11 +50,11 @@ const Life = (props) => {
   return (
     <g filter="url(#shadow)">
       <path
-        style={heartStyle}
+        style={HeartStyle}
         d={pathFromBezierCurve(leftSide)}
       />
       <path
-        style={heartStyle}
+        style={HeartStyle}
         d={pathFromBezierCurve(rightSide)}
       />
     </g>

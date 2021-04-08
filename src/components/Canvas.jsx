@@ -8,6 +8,7 @@ import CannonBall from './CannonBall';
 import CurrentScore from './CurrentScore';
 import Ufo from './Ufo';
 import Life from './Life';
+import StartGame from './StartGame';
 
 const Canvas = (props) => {
   const viewBox = [window.innerWidth / -2, 100 - window.innerHeight, window.innerWidth, window.innerHeight];
@@ -32,6 +33,7 @@ const Canvas = (props) => {
       <Ufo position={{x: -150, y: -300}}/>
       <Ufo position={{x: 150, y: -300}}/>
       <Life position={{x: -300, y: 35}} />
+      <StartGame onClick={() => console.log('Mini-Game')} />
     </svg>
   );
 };
