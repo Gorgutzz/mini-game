@@ -50,11 +50,11 @@ const Life = (props) => {
   return (
     <g filter="url(#shadow)">
       <path
-        style={liftStyle}
+        style={heartStyle}
         d={pathFromBezierCurve(leftSide)}
       />
       <path
-        style={liftStyle}
+        style={heartStyle}
         d={pathFromBezierCurve(rightSide)}
       />
     </g>

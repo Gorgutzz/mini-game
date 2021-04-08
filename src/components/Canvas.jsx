@@ -7,6 +7,7 @@ import CannonShaft from './CannonShaft';
 import CannonBall from './CannonBall';
 import CurrentScore from './CurrentScore';
 import Ufo from './Ufo';
+import Life from './Life';
 
 const Canvas = (props) => {
   const viewBox = [window.innerWidth / -2, 100 - window.innerHeight, window.innerWidth, window.innerHeight];
@@ -30,6 +31,7 @@ const Canvas = (props) => {
       <CurrentScore score={15} />
       <Ufo position={{x: -150, y: -300}}/>
       <Ufo position={{x: 150, y: -300}}/>
+      <Life position={{x: -300, y: 35}} />
     </svg>
   );
 };
