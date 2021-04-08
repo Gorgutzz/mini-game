@@ -17,8 +17,26 @@ const StartGame = (props) => {
     onClick: props.onClick,
   };
 
+  const text = {
+    textAnchor: 'middle',
+    x: 0,
+    y: -150, 
+    style: {
+      fontFamily: '"Joti One", cursive',
+      fontSize: 60,
+      fill: '#e3e3e3',
+      cursor: 'pointer',
+    },
+    onClick: props.onClick,
+  };
 
   return (
+    <g filter="url(#shadow)">
+      <rect {...button} />
+      <text {...text}>
+        Tap To Start!
+      </text>
+    </g>
   );
 };
 
