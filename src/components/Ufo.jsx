@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import UfoBase from './UfoBase';
 import UfoTop from './UfoTop';
 
-const UFO = props => (
+const Ufo = props => (
   <g>
     <UfoBase position={props.position} />
     <UfoTop position={props.position} />
