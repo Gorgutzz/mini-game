@@ -11,7 +11,8 @@ import Life from './Life';
 import StartGame from './StartGame';
 
 const Canvas = (props) => {
-  const viewBox = [window.innerWidth / -2, 100 - window.innerHeight, window.innerWidth, window.innerHeight];
+  const gameHeight = 1200;
+  const viewBox = [window.innerWidth / -2, 100 - gameHeight, window.innerWidth, gameHeight];
   return (
     <svg
       id="mini-game-canvas"
