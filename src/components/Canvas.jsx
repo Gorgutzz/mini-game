@@ -39,8 +39,8 @@ const Canvas = (props) => {
 
       { props.gameState.started &&
         <g>
-          <FlyingObject position={{x: -150, y: -300}}/>
-          <FlyingObject position={{x: 150, y: -300}}/>
+          <Ufo position={{x: -150, y: -300}}/>
+          <Ufo position={{x: 150, y: -300}}/>
         </g>
       }
     </svg>
