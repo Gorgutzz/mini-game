@@ -43,6 +43,13 @@ const Canvas = (props) => {
           <Ufo position={{x: 150, y: -300}}/>
         </g>
       }
+
+      {props.gameState.ufos.map(ufo => (
+        <Ufo
+          key={ufo.id}
+          position={ufo.position}
+        />
+      ))}
     </svg>
   );
 };
@@ -53,6 +60,13 @@ Canvas.propTypes = {
     started: PropTypes.bool.isRequired,
     kills: PropTypes.number.isRequired,
     lives: PropTypes.number.isRequired,
+    ufos: PropTypes.arrayOf(PropTypes.shape({
+      position: PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired
+      }).isRequired,
+      id: PropTypes.number.isRequired,
+    })).isRequired,
   }).isRequired,
   trackMouse: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
