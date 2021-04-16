@@ -17,10 +17,10 @@ export default (state) => {
 
   const id = (new Date()).getTime();
   const predefinedPosition = Math.floor(Math.random() * maxufos);
-  const flyingObjectPosition = ufosStarterPositions[predefinedPosition];
-  const newFlyingObject = {
+  const ufoPosition = ufosStarterPositions[predefinedPosition];
+  const newUfo = {
     position: {
-      x: flyingObjectPosition,
+      x: ufoPosition,
       y: ufosStarterYAxis,
     },
     createdAt: (new Date()).getTime(),
@@ -33,7 +33,7 @@ export default (state) => {
       ...state.gameState,
       ufos: [
         ...state.gameState.ufos,
-        newFlyingObject
+        newUfo
       ],
       lastObjectCreatedAt: new Date(),
     }
