@@ -9,10 +9,19 @@ function moveObjects(state, action) {
 
   const newState = createUfos(state);
 
+  const now = (new Date()).getTime();
+  const ufos = newState.gameState.ufos.filter(object => (
+    (now - object.createdAt) < 4000
+  ));
+
   const { x, y } = mousePosition;
   const angle = calculateAngle(0, 0, x, y);
   return {
     ...newState,
+    gameState: {
+      ...newState.gameState,
+      ufos,
+    },
     angle,
   };
 }

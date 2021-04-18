@@ -5,7 +5,7 @@ export const createInterval = 1000;
 
 export const maxUfos = 4;
 
-export const ufosStarterYAxis = -1000;
+export const ufosStarterYAxis = -1100;
 
 export const ufosStarterPositions = [
   -300,
@@ -13,3 +13,5 @@ export const ufosStarterPositions = [
   150,
   300,
 ];
+
+export const gameHeight = 1200;
