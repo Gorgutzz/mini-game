@@ -1,5 +1,5 @@
 import {
-  createInterval, ufosStarterYAxis, maxufos,
+  createInterval, ufosStarterYAxis, maxUfos,
   ufosStarterPositions
 } from '../utils/constants';
 
@@ -10,13 +10,13 @@ export default (state) => {
   const { lastObjectCreatedAt, ufos } = state.gameState;
   const createNewObject = (
     now - (lastObjectCreatedAt).getTime() > createInterval &&
-    ufos.length < maxufos
+    ufos.length < maxUfos
   );
 
   if ( ! createNewObject) return state;
 
   const id = (new Date()).getTime();
-  const predefinedPosition = Math.floor(Math.random() * maxufos);
+  const predefinedPosition = Math.floor(Math.random() * maxUfos);
   const ufoPosition = ufosStarterPositions[predefinedPosition];
   const newUfo = {
     position: {

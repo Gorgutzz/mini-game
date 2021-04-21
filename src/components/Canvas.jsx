@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Sky from './Sky';
 import Ground from './Ground';
 import CannonBase from './CannonBase';
-import CannonPipe from './CannonPipe';
+import CannonShaft from './CannonShaft';
 import CurrentScore from './CurrentScore'
 import Ufo from './Ufo';
 import StartGame from './StartGame';
@@ -14,7 +14,7 @@ const Canvas = (props) => {
   const viewBox = [window.innerWidth / -2, 100 - gameHeight, window.innerWidth, gameHeight];
   return (
     <svg
-      id="mini-game-canvas"
+      id="mini-game"
       preserveAspectRatio="xMaxYMax none"
       onMouseMove={props.trackMouse}
       viewBox={viewBox}
@@ -26,22 +26,15 @@ const Canvas = (props) => {
       </defs>
       <Sky />
       <Ground />
-      <CannonPipe rotation={props.angle} />
+      <CannonShaft rotation={props.angle} />
       <CannonBase />
       <CurrentScore score={15} />
 
       { ! props.gameState.started &&
-        <g>
-          <StartGame onClick={() => props.startGame()} />
-          <Title />
-        </g>
-      }
-
-      { props.gameState.started &&
-        <g>
-          <Ufo position={{x: -150, y: -300}}/>
-          <Ufo position={{x: 150, y: -300}}/>
-        </g>
+      <g>
+        <StartGame onClick={() => props.startGame()} />
+        <Title />
+      </g>
       }
 
       {props.gameState.ufos.map(ufo => (
@@ -60,13 +53,6 @@ Canvas.propTypes = {
     started: PropTypes.bool.isRequired,
     kills: PropTypes.number.isRequired,
     lives: PropTypes.number.isRequired,
-    ufos: PropTypes.arrayOf(PropTypes.shape({
-      position: PropTypes.shape({
-        x: PropTypes.number.isRequired,
-        y: PropTypes.number.isRequired
-      }).isRequired,
-      id: PropTypes.number.isRequired,
-    })).isRequired,
   }).isRequired,
   trackMouse: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,

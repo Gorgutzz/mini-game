@@ -1,4 +1,5 @@
-export const backgroundAndGroundWidth = 5000;
+export const skyAndGroundWidth = 5000;
+
 export const gameWidth = 800;
 
 export const createInterval = 1000;

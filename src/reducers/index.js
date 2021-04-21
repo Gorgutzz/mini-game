@@ -6,7 +6,7 @@ const initialGameState = {
   started: false,
   kills: 0,
   lives: 3,
-  ufos: [],
+  flyingObjects: [],
   lastObjectCreatedAt: new Date(),
 };
 
