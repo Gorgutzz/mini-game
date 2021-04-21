@@ -5,8 +5,8 @@ import Canvas from './components/Canvas';
 import * as Auth0 from 'auth0-web';
 
 Auth0.configure({
-  domain: 'YOUR_AUTH0_DOMAIN',
-  clientID: 'YOUR_AUTH0_CLIENT_ID',
+  domain: 'dev-x8s4z59p.us.auth0.com',
+  clientID: 'BZIKT03UpKkghqAQO9vfKaRBs58bYWZj',
   redirectUri: 'http://localhost:3000/',
   responseType: 'token id_token',
   scope: 'openid profile manage:points',
