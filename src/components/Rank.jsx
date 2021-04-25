@@ -21,6 +21,22 @@ const Rank = (props) => {
 
   if (props.player.currentPlayer) textStyle.fill = '#e9ea64';
 
+  const pictureProperties = {
+    style: pictureStyle,
+    x: x - 140,
+    y: y - 40,
+    href: props.player.picture,
+    clipPath: `url(#${clipId})`,
+  };
+
+  const frameProperties = {
+    width: 55,
+    height: 55,
+    rx: 30,
+    x: pictureProperties.x,
+    y: pictureProperties.y,
+  };
+
   return (
   );
 };
