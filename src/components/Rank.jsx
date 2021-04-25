@@ -38,8 +38,35 @@ const Rank = (props) => {
   };
 
   return (
+    <g>
+      <defs>
+        <rect id={rectId} {...frameProperties} />
+        <clipPath id={clipId}>
+          <use xlinkHref={'#' + rectId} />
+        </clipPath>
+      </defs>
+      <use xlinkHref={'#' + rectId} strokeWidth="2" stroke="black" />
+      <text filter="url(#shadow)" style={textStyle} x={x - 200} y={y}>{props.player.rank}º</text>
+      <image {...pictureProperties} />
+      <text filter="url(#shadow)" style={textStyle} x={x - 60} y={y}>{props.player.name}</text>
+      <text filter="url(#shadow)" style={textStyle} x={x + 350} y={y}>{props.player.maxScore}</text>
+    </g>
   );
 };
 
+Rank.propTypes = {
+  player: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    maxScore: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+    rank: PropTypes.number.isRequired,
+    currentPlayer: PropTypes.bool.isRequired,
+  }).isRequired,
+  position: PropTypes.shape({
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired
+  }).isRequired,
+};
 
 export default Rank;
